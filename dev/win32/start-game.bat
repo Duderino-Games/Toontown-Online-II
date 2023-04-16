@@ -1,14 +1,13 @@
 @echo off
 
-title Toontown Stride Game Launcher
+title Toontown 2 Game Launcher
 
 echo Choose your connection method!
 echo.
 echo #1 - Localhost
 echo #2 - Dev Server
 echo #3 - Custom
-echo #4 - Local RemoteDB
-echo #5 - Prod Server
+echo #4 - Prod Server
 echo.
 
 :selection
@@ -21,8 +20,6 @@ if %INPUT%==1 (
 ) else if %INPUT%==2 (
     set TTS_GAMESERVER=167.114.220.172
 ) else if %INPUT%==4 (
-    set TTS_GAMESERVER=127.0.0.1
-) else if %INPUT%==5 (
     SET TTS_GAMESERVER=lw2.ez-webz.com:7198
 ) else if %INPUT%==3 (
     echo.
@@ -46,18 +43,18 @@ if %INPUT%==2 (
 echo.
 
 echo ===============================
-echo Starting Toontown Stride...
+echo Starting Toontown Online II...
 echo ppython: "C:\Panda3D-1.10.0\python\ppython.exe"
 
 if %INPUT%==2 (
-    echo Username: %ttsUsername%
+    echo Username: %tt2Username%
 ) else if %INPUT%==4 (
-    echo Username: %ttsUsername%
+    echo Username: %tt2Username%
 ) else (
-    echo Username: %TTS_PLAYCOOKIE%
+    echo Username: %TT2_PLAYCOOKIE%
 )
 
-echo Gameserver: %TTS_GAMESERVER%
+echo Gameserver: %TT2_GAMESERVER%
 echo ===============================
 
 cd ../../
