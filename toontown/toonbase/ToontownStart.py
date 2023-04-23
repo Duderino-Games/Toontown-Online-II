@@ -112,7 +112,7 @@ from toontown.launcher.TTSLauncher import TTSLauncher
 
 __builtin__.launcher = TTSLauncher()
 
-notify.info('Starting the game...')
+notify.info('Starting Toontown Online...')
 tempLoader = Loader()
 backgroundNode = tempLoader.loadSync(Filename('phase_3/models/gui/loading-background'))
 from direct.gui import DirectGuiGlobals
@@ -145,7 +145,7 @@ DirectGuiGlobals.setDefaultClickSound(base.loadSfx('phase_3/audio/sfx/GUI_create
 DirectGuiGlobals.setDefaultDialogGeom(loader.loadModel('phase_3/models/gui/dialog_box_gui'))
 import TTLocalizer
 if base.musicManagerIsValid:
-    music = base.loadMusic('phase_3/audio/bgm/tt_theme.ogg')
+    music = base.loadMusic('phase_3/audio/bgm/ttr_theme.mp3')
     if music:
         music.setLoop(1)
         music.play()
@@ -156,7 +156,7 @@ else:
     music = None
 import ToontownLoader
 from direct.gui.DirectGui import *
-serverVersion = base.config.GetString('server-version', 'BETA')
+serverVersion = base.config.GetString('server-version', '2.0')
 version = OnscreenText(serverVersion, pos=(-1.3, -0.975), scale=0.06, fg=Vec4(0, 0, 1, 0.6), align=TextNode.ALeft)
 version.setPos(0.03,0.03)
 version.reparentTo(base.a2dBottomLeft)
