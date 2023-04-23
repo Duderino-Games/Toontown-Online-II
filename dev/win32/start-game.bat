@@ -1,6 +1,6 @@
 @echo off
 
-title Toontown Online Game Launcher
+title Toontown 2 Game Launcher
 
 echo Choose your connection method!
 echo.
@@ -40,7 +40,7 @@ if %INPUT%==2 (
 echo.
 
 echo ===============================
-echo Starting Toontown Online 2: The Second Chapter...
+echo Starting Toontown Online 2: The Return...
 echo ppython: "C:\Panda3D-1.10.0\python\ppython.exe"
 
 if %INPUT%==2 (
